@@ -1,0 +1,31 @@
+﻿@model IEnumerable<NeuralNetworks.Models.DataInput>
+
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h3>Вхідні дані нейромережі</h3>
+    <table>
+        <tr class="header">
+            <td><p>Карбон</p></td>
+            <td><p>Оксиген</p></td>
+            <td><p>Нітроген</p></td>
+            <td><p>Гідроген</p></td>
+            <td><p>Сульфур</p></td>
+            <td><p>Тип керогену</p></td>
+        </tr>
+
+    @foreach (NeuralNetworks.Models.DataInput d in Model)
+    {
+        <tr>
+            <td><p>@d.Carbon</p></td>
+            <td><p>@d.Oxygen</p></td>
+            <td><p>@d.Nitrogen</p></td>
+            <td><p>@d.Hydrogen</p></td>
+            <td><p>@d.Sulfur</p></td>
+            <td><p>@d.Type</p></td>
+            <td><p><a href="/Home/Buy/@d.Id">Купить</a></p></td>
+        </tr>
+    }
+        </table>
+</div>
