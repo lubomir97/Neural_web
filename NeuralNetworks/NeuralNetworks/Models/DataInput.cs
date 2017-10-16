@@ -8,11 +8,11 @@ namespace NeuralNetworks.Models
     public class DataInput
     {
         public int Id { get; set; }
-        public int Carbon { get; set; }
-        public int Oxygen { get; set; }
-        public int Nitrogen { get; set; }
-        public int Hydrogen { get; set; }
-        public int Sulfur { get; set; }
+        public double Carbon { get; set; }
+        public double Oxygen { get; set; }
+        public double Nitrogen { get; set; }
+        public double Hydrogen { get; set; }
+        public double Sulfur { get; set; }
         public int Type { get; set; }
     }
 }
